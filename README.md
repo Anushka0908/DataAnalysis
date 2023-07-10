@@ -13,9 +13,10 @@ STEP 2 : Data Analysis - Queried insights by using SQL such as -
   (Highest Profit (City-Los Angeles, State-California, Region-West, East, Central, South))
 * Total Sales Category and Sub-Category Wise so they were in order Office Supplies, Furniture, Technology.
   (Sub-Category (Phones, Chairs, Binders))
-* Calculated Average Time of Delivery so that problems in areas having more delivery time could be looked upon.
+* Calculated Average Time of Delivery so that problems in areas with more delivery time could be addressed.
 * Searched for Top 10 frequent Customers Names so that they can be given some type of bonus for their trust.
 * Also looked upon which payment mode is most preferred.
   (Delivery, Online Payment, Cards)
 
-STEP 3 : 
+STEP 3 : Global Store Sales Dashboard - Created an interactive dashboard using Power BI indicating Key Performance Indicators which can be looked upon according to different regions, it also contains a map giving a more clear view, then using historic data and applying time series analysis a sales forecast for next 15 days is generated.
+
