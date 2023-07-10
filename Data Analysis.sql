@@ -34,26 +34,12 @@ ORDER BY Total_Profit DESC
 --Texas is having minimum Profit
 --There are 49 States in total
 
---Now Displaying Total number of Sales by Category of Product
-SELECT SUM(Sales) AS Total_Sales, Category
-FROM DataAnalysis..SalesDataGlobalStore
-GROUP BY Category
-ORDER BY Total_Sales DESC;
---Number of Sales are highest for Office Supplies, then for Furniture, and lowest for Technology
-
 --Calculating Total Profit Region-wise
 SELECT SUM(Profit) AS Total_Profit, Region
 FROM DataAnalysis..SalesDataGlobalStore
 GROUP BY Region
 ORDER BY Total_Profit DESC;
 --Highest Profit can be seen in West Region, then East Region, then Central Region, then South Region
-
---Now Displaying Total number of Sales by Sub_Category of Product
-SELECT SUM(Sales) AS Total_Sales, Sub_Category
-FROM DataAnalysis..SalesDataGlobalStore
-GROUP BY Sub_Category
-ORDER BY Total_Sales DESC;
---In Sub_Category Highest Sales can be seen for Phones followed by Chairs, Binders due to 2nd, 3rd Sub_Category Sales is highest for Office Supplies
 
 --Searching for City in State Calfornia having Highest Profit
 SELECT SUM(Profit) AS Total_Profit, City
@@ -62,6 +48,20 @@ WHERE State = 'California'
 GROUP BY City
 ORDER BY Total_Profit DESC;
 --Therefore, Los Angeles City is having Highest Profit
+
+--Now Displaying Total number of Sales by Category of Product
+SELECT SUM(Sales) AS Total_Sales, Category
+FROM DataAnalysis..SalesDataGlobalStore
+GROUP BY Category
+ORDER BY Total_Sales DESC;
+--Number of Sales are highest for Office Supplies, then for Furniture, and lowest for Technology
+
+--Now Displaying Total number of Sales by Sub_Category of Product
+SELECT SUM(Sales) AS Total_Sales, Sub_Category
+FROM DataAnalysis..SalesDataGlobalStore
+GROUP BY Sub_Category
+ORDER BY Total_Sales DESC;
+--In Sub_Category Highest Sales can be seen for Phones followed by Chairs, Binders due to 2nd, 3rd Sub_Category Sales is highest for Office Supplies
 
 --Sorting according to Segment 
 SELECT SUM(Sales) AS Total_Sales, SUM(Profit) AS Total_Profit, Segment, (SUM(Profit)/SUM(Sales-Profit))*100 AS Ratio
@@ -123,4 +123,3 @@ FROM DataAnalysis..SalesDataGlobalStore
 GROUP BY Customer_Name
 ORDER BY Number_Of_Times_Visited DESC;
 --Top 10 Customers are : Emily Phan, Edward Hooks, Paul Prost, Seth Vernon, Pete Kriz, Lena Cacioppo, Sally Hughsby, William Brown, Dean percer, Mick Hernandez
-
